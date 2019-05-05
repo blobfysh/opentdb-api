@@ -58,6 +58,7 @@ exports.getTrivia = async function (options = {}){
                 .replace(/&Aacute;/g, 'Á')
                 .replace(/&ntilde;/g, 'ñ')
                 .replace(/&rdquo;/g, '\\"')
+                .replace(/&ouml;/g, 'ö')
                 );
                 resolve(filteredResult);
             }
@@ -141,3 +142,13 @@ exports.getQuestionCount = function(category){
         }
     });
 }
+
+
+var options = {
+    amount: 2,
+    category: 'science',
+    difficulty: 'easy',
+    type: 'multiple'
+}
+
+exports.getTrivia(options).then(console.log);
