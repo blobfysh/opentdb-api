@@ -124,7 +124,7 @@ exports.getCategories = async function(){
 
 /**
  * Returns the total question account for a category
- * @deprecated {String} category Category to get count for.
+ * @param {String} category Category to get count for.
  * @returns {Promse<Object>}
  */
 exports.getQuestionCount = function(category){
