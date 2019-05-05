@@ -142,13 +142,3 @@ exports.getQuestionCount = function(category){
         }
     });
 }
-
-
-var options = {
-    amount: 2,
-    category: 'science',
-    difficulty: 'easy',
-    type: 'multiple'
-}
-
-exports.getTrivia(options).then(console.log);

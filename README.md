@@ -28,6 +28,45 @@ opentdb.getTrivia(options).then(result => {
 // =>    correct_answer: 'Cat',
 // =>    incorrect_answers: [ 'Dog', 'Bat', 'Butterfly' ] } ]
 ```
+
+## Examples of using a token to prevent duplicates
+### Using async/await
+```js
+const opentdb = require('opentdb-api');
+
+const newToken = await opentdb.getToken();
+
+var options = {
+    amount: 2,
+    category: 'science',
+    difficulty: 'easy',
+    type: 'multiple',
+    token: newToken
+}
+
+const uniqueTrivia = await opentdb.getTrivia(options);
+
+console.log(uniqueTrivia);
+```
+### Using .then
+```js
+const opentdb = require('opentdb-api');
+
+opentdb.getToken().then(newToken => {
+
+  var options = {
+      amount: 2,
+      category: 'science',
+      difficulty: 'easy',
+      type: 'multiple',
+      token: newToken
+  }
+
+  opentdb.getTrivia(options).then(uniqueTrivia => {
+    console.log(uniqueTrivia);
+  });
+});
+```
 ## Functions
 
 ### `getTrivia(options)`
