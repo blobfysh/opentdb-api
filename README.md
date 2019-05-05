@@ -9,7 +9,7 @@ opentdb.getTrivia().then(result => {
   console.log(result);
 });
 ```
-### Functions
+## Functions
 
 ### `getTrivia(options)`
 Retrieves random trivia.
