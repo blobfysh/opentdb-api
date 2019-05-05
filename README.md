@@ -82,6 +82,7 @@ Retrieves random trivia.
 Returns promise with a new session token. Token can be used to prevent duplicate questions when using the getTrivia() function.
 
 ### `resetToken(token)`
+Resolves into boolean value if reset was successful or not.
 Resets the memory for a given token. Can be used once a token has queried all possible questions.
 
 ### `getCategories()`
