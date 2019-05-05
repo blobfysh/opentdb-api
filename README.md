@@ -1,3 +1,10 @@
+[![NPM](https://nodei.co/npm/opentdb-api.png)](https://nodei.co/npm/opentdb-api/)
+
+## Installation
+```
+npm install opentdb-api
+```
+
 ## About
 Easily retrieve random trivia questions using the [Open Trivia DB API.](https://opentdb.com/)
 
